@@ -1,0 +1,27 @@
+# Go binaries and build artifacts
+*.exe
+*.out
+*.test
+/bin/
+/obj/
+
+# Go module dependencies
+/vendor/
+
+# VS Code settings
+.vscode/
+
+# IDE settings
+.idea/
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# Environment variables files
+.env
+
+# Log files
+*.log
