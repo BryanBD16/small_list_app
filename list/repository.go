@@ -1,11 +1,5 @@
 package list
 
-//Command to create a database
-//mysql -u root -p -e 'CREATE DATABASE name_of_db'
-//Command to run query
-//mysql -u user_name -p password -e 'SQL Query' database
-//mysql -u root -p -e 'CREATE TABLE elements(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255) NOT NULL, description VARCHAR(255));' list_app
-
 import (
 	"database/sql"
 	"fmt"

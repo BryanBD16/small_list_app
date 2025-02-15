@@ -23,7 +23,7 @@ func (s *Service) Get(w http.ResponseWriter, req *http.Request) {
 	elems, err := s.r.GetElements()
 
 	if err != nil {
-		w.WriteHeader(http.StatusNotFound) // 404 Created
+		w.WriteHeader(http.StatusNotFound) // 404 error
 		return
 	}
 
@@ -32,7 +32,7 @@ func (s *Service) Get(w http.ResponseWriter, req *http.Request) {
 	err = json.NewEncoder(w).Encode(elems)
 
 	if err != nil {
-		http.Error(w, "Error occuring during elements encoding", http.StatusInternalServerError) //500 created
+		http.Error(w, "Error occuring during elements encoding", http.StatusInternalServerError) //500 error
 		return
 	}
 }
@@ -42,7 +42,7 @@ func (s *Service) Add(w http.ResponseWriter, req *http.Request) {
 	decoder := json.NewDecoder(req.Body)
 	err := decoder.Decode(&newElem)
 	if err != nil {
-		http.Error(w, "Error when reading the data", http.StatusBadRequest) //400 created
+		http.Error(w, "Error when reading the data", http.StatusBadRequest) //400 error
 		return
 	}
 
